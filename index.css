@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+ :root {
+    --first-font: 'Josefin Sans', sans-serif;
+    --white: #ffffff;
+    --black: #000000;
+    --light: #42cbf8;
+    --peach: #FFE5B4;
+    --red: rgb(199, 14, 14);
+    --grey: rgb(122, 120, 120);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--peach);
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-toggle {
+    visibility: hidden
+}
+
+nav {
+    background: var(--black);
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;
+    padding: 1rem;
+    height: 4em;
+}
+
+.links {
+    display: flex;
+    height: auto;
+    font-size: larger;
+}
+
+.links a {
+    padding: 0;
+    margin: 0 0.5rem;
+}
+
+.links a:hover {
+    padding: 0;
+    background: transparent;
+    font-size: larger;
+    transition: 0.5s;
+    color: var(--red);
+}
+
+.social {
+    display: flex;
+    font-size: smaller;
+}
+
+.social a {
+    margin: 0 0.3rem;
+    color: var(--white);
+}
+
+.social a:hover {
+    color: var(--red);
+    font-size: larger;
+    transition: 0.5s;
+}
+
+.logo {
+    height: 80px;
+    object-fit: cover;
+    width: 100px;
+}
+
+@media screen and (max-width:800px) {
+    .nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.3rem;
+    }
+    .nav-center {
+        display: block;
+        height: auto;
+    }
+    .nav-toggle {
+        visibility: visible;
+        font-size: 1.5rem;
+        color: var(--white);
+        background: transparent;
+        border-color: transparent;
+        cursor: pointer;
+    }
+    .nav-toggle:hover {
+        color: var(--red);
+        transform: rotate(90deg);
+        transition: 0.5s;
+    }
+    .nav-toggle:not(:hover) {
+        transform: rotate(0deg);
+        transition: 0.5s;
+    }
+    .social {
+        display: none;
+    }
+    .links a {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        letter-spacing: 0.1rem;
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: 0.5s;
+    }
+    .links a:hover {
+        color: var(--red);
+        padding-left: 1.5rem;
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .show {
+        height: 10rem;
+    }
+}
